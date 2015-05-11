@@ -1,0 +1,16 @@
+[
+{
+  "modid": "exastrisrebirth",
+  "name": "Ex Astris Rebirth",
+  "description": "Ex Nihilo Addon",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["LoveHoly", "MikeLydeamore"],
+  "credits": "",
+  "logoFile": "assets/exastrisrebirth/ExAstrisRebirthLogo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
