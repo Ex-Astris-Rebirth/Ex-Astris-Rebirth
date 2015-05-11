@@ -5,7 +5,7 @@ import net.minecraftforge.common.config.Configuration;
 public class ExAstrisRebirthData {
 	public static final String MODID = "exastrisrebirth";
 	public static final String MODNAME = "Ex Astris Rebirth";
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "@VERSION@";
 	public static final String DEPENDENCIES = "required-after:Forge@[10.13.0.1180,);required-after:exnihilo;after:ThermalExpansion;after:Thaumcraft;after:TConstruct;after:TSteelworks;after:RedstoneArsenal;after:RotaryCraft;after:Metallurgy;after:ThermalFoundation;after:EnderIO;after:chisel;after:CoFHAPI|energy";
     
 	public static final String UNCHARGED_NETHER_STAR = "itemUnchargedNetherStar";
