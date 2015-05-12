@@ -229,6 +229,9 @@ public class ExAstrisRebirthData {
 	public static String allowMiniSmelteryKey = "hardStone";
 	public static boolean allowMiniSmeltery = true;
 	
+	public static String sieveMakeParticlesKey = "sieve Make Particles";
+	public static boolean sieveMakeParticles = true;
+	
 	public static void load(Configuration config) {
 		enableEIORecipes = config.get(categoryExAstrisRebirth, enableEIORecipesKey, true, "Enable EnderIO Recipes").getBoolean();
 		enableTERecipes = config.get(categoryExAstrisRebirth, enableTERecipesKey, true, "Enable Thermal Expansion/Foundation Recipes").getBoolean();
@@ -247,6 +250,7 @@ public class ExAstrisRebirthData {
 		allowBotaniaComposting = config.get(categoryBotania, allowBotaniaCompostingKey, true, "Allow Botania Mystical Flowers to be composted").getBoolean();
 		allowHammerAutomatic = config.get(categoryExAstrisRebirth, allowHammerAutomaticKey, allowHammerAutomatic, "Enable Automatic Hammer").getBoolean();
 		allowUpgrades = config.get(categoryExAstrisRebirth, allowUpgradesKey, true, "Allow Upgrades for Automatic Sieve/Hammer").getBoolean();
+		sieveMakeParticles = config.get(categoryExAstrisRebirth, sieveMakeParticlesKey, true, "enable sieve make particles").getBoolean();
 		
 		//Chisel
 		allowChiselBlocksFromSifting = config.get(categoryChisel, allowChiselBlocksFromSiftingKey, true, "Allow Marble and Limestone stones to be obtained via sifting").getBoolean();
