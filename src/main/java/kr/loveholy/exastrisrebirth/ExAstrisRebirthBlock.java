@@ -12,6 +12,7 @@ import kr.loveholy.exastrisrebirth.block.BlockSieveAutomatic;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockBarrelTweak;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockHardStone;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockOre;
+import kr.loveholy.exastrisrebirth.itemblock.ItemBlockSieveAutomatic;
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -31,7 +32,7 @@ public class ExAstrisRebirthBlock {
 	public static Block blockOreArdite;
 	public static void init() {
 		blockSieveAutomatic = new BlockSieveAutomatic();
-		GameRegistry.registerBlock(blockSieveAutomatic, ExAstrisRebirthData.SIEVE_AUTOMATIC);
+		GameRegistry.registerBlock(blockSieveAutomatic, ItemBlockSieveAutomatic.class ,ExAstrisRebirthData.SIEVE_AUTOMATIC);
 		
 		blockHammerAutomatic = new BlockHammerAutomatic();
 		GameRegistry.registerBlock(blockHammerAutomatic, ExAstrisRebirthData.HAMMER_AUTOMATIC);
