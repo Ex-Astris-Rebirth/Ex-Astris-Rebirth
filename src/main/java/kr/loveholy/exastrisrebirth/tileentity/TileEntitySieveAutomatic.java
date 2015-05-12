@@ -88,7 +88,7 @@ public class TileEntitySieveAutomatic extends TileEntity implements
 
 	@Override
 	public void updateEntity() {
-		if (worldObj.isRemote && particleMode) {
+		if (worldObj.isRemote && particleMode && ExAstrisRebirthData.sieveMakeParticles) {
 			spawnFX(content, contentMeta);
 		}
 
