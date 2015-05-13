@@ -33,7 +33,7 @@ minecraft {
     assetDir = "eclipse/assets"
 	 
 	 replace "@VERSION@", project.version
-	 replaceIn "Data/ModData.java"
+	 replaceIn "ExAstrisRebirthData.java"
 	
 }
 
