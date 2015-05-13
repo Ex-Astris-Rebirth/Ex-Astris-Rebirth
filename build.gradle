@@ -25,7 +25,7 @@ buildscript {
 apply plugin: 'forge'
 apply plugin: 'maven-publish'
 
-version = "MC${minecraft_version}-${mod_version}-${System.getenv().BUILD_NUMBER}"
+version = "MC${minecraft_version}-${mod_version}-${BUILD_NUMBER}"
 group= "kr.loveholy.exastrisrebirth" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Ex-Astris-Rebirth"
 minecraft {
