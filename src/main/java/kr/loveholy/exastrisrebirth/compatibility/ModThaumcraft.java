@@ -3,8 +3,13 @@ package kr.loveholy.exastrisrebirth.compatibility;
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthBlock;
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthData;
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthItem;
+import kr.loveholy.exastrisrebirth.block.BlockBarrelThaumium;
+import kr.loveholy.exastrisrebirth.item.ItemEldritchPortalSpawner;
+import kr.loveholy.exastrisrebirth.item.ItemHammerThaumium;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import thaumcraft.api.ThaumcraftApi;
@@ -47,7 +52,21 @@ public class ModThaumcraft {
 		}
 		addBarrelRegistry();
 	}
-
+	
+	public static Item itemHammerThaumium()
+	{
+		return new ItemHammerThaumium();
+	}
+	
+	public static Item itemEldritchPortalSpawner()
+	{
+		return new ItemEldritchPortalSpawner();
+	}
+	
+	public static Block blockBarrelThaumium()
+	{
+		return new BlockBarrelThaumium();
+	}
 	public static void addHammerRegistry() {
 		HammerRegistry.register(Blocks.double_stone_slab, 1,
 				GameRegistry.findItem("Thaumcraft", "ItemShard"), 0, 1.00f,

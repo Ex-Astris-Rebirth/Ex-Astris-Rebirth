@@ -1,11 +1,9 @@
 package kr.loveholy.exastrisrebirth;
 
+import kr.loveholy.exastrisrebirth.compatibility.ModBotania;
+import kr.loveholy.exastrisrebirth.compatibility.ModRedstoneArsenal;
+import kr.loveholy.exastrisrebirth.compatibility.ModThaumcraft;
 import kr.loveholy.exastrisrebirth.item.ItemChiselStone;
-import kr.loveholy.exastrisrebirth.item.ItemCrookRF;
-import kr.loveholy.exastrisrebirth.item.ItemEldritchPortalSpawner;
-import kr.loveholy.exastrisrebirth.item.ItemHammerMana;
-import kr.loveholy.exastrisrebirth.item.ItemHammerRF;
-import kr.loveholy.exastrisrebirth.item.ItemHammerThaumium;
 import kr.loveholy.exastrisrebirth.item.ItemOre;
 import kr.loveholy.exastrisrebirth.item.ItemSeedFoodPlus;
 import kr.loveholy.exastrisrebirth.item.ItemSieveUpgrade;
@@ -35,11 +33,9 @@ public class ExAstrisRebirthItem {
 	
 	public static Item itemEldritchPortalSpawner;
 	public static void init() {
-		if (ExAstrisRebirthData.allowSieveAutomatic)
-		{
-			itemSieveUpgrade = new ItemSieveUpgrade();
-			GameRegistry.registerItem(itemSieveUpgrade, ExAstrisRebirthData.SIEVE_UPGRADE);
-		}
+		
+		itemSieveUpgrade = new ItemSieveUpgrade();
+		GameRegistry.registerItem(itemSieveUpgrade, ExAstrisRebirthData.SIEVE_UPGRADE);
 		
 		itemDollFreezing = new ItemStackable(ExAstrisRebirthData.DOLL_FREEZING);
 		GameRegistry.registerItem(itemDollFreezing, ExAstrisRebirthData.DOLL_FREEZING);
@@ -52,7 +48,7 @@ public class ExAstrisRebirthItem {
 		
 		if (Loader.isModLoaded("Botania"))
 		{
-			itemHammerMana = new ItemHammerMana();
+			itemHammerMana = ModBotania.itemHammerMana();
 			GameRegistry.registerItem(itemHammerMana, ExAstrisRebirthData.HAMMER_MANA);
 		}
 		
@@ -70,10 +66,10 @@ public class ExAstrisRebirthItem {
 		
 		if (Loader.isModLoaded("RedstoneArsenal"))
 		{
-			itemHammerRF =  new ItemHammerRF();
+			itemHammerRF =  ModRedstoneArsenal.itemHammerRF();
 			GameRegistry.registerItem(itemHammerRF, ExAstrisRebirthData.HAMMER_RF);
 
-			itemCrookRF = new ItemCrookRF();
+			itemCrookRF = ModRedstoneArsenal.itemCrookRF();
 			GameRegistry.registerItem(itemCrookRF, ExAstrisRebirthData.CROOK_RF);
 		}
 
@@ -85,10 +81,10 @@ public class ExAstrisRebirthItem {
 		
 		if (Loader.isModLoaded("Thaumcraft"))
 		{
-			itemHammerThaumium =  new ItemHammerThaumium();
+			itemHammerThaumium =  ModThaumcraft.itemHammerThaumium();
 			GameRegistry.registerItem(itemHammerThaumium, ExAstrisRebirthData.HAMMER_THAUMIUM);
 			
-			itemEldritchPortalSpawner = new ItemEldritchPortalSpawner();
+			itemEldritchPortalSpawner = ModThaumcraft.itemEldritchPortalSpawner();
 			GameRegistry.registerItem(itemEldritchPortalSpawner, ExAstrisRebirthData.ELDRITCH_PORTAL_SPAWNER);
 		}
 	}

@@ -1,7 +1,6 @@
 package kr.loveholy.exastrisrebirth;
 
 import kr.loveholy.exastrisrebirth.block.BlockBarrelStone;
-import kr.loveholy.exastrisrebirth.block.BlockBarrelThaumium;
 import kr.loveholy.exastrisrebirth.block.BlockBarrelTweak;
 import kr.loveholy.exastrisrebirth.block.BlockBeeTrapInfused;
 import kr.loveholy.exastrisrebirth.block.BlockEndCake;
@@ -9,11 +8,13 @@ import kr.loveholy.exastrisrebirth.block.BlockHammerAutomatic;
 import kr.loveholy.exastrisrebirth.block.BlockHardStone;
 import kr.loveholy.exastrisrebirth.block.BlockOre;
 import kr.loveholy.exastrisrebirth.block.BlockSieveAutomatic;
+import kr.loveholy.exastrisrebirth.compatibility.ModThaumcraft;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockBarrelTweak;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockHardStone;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockOre;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockSieveAutomatic;
 import net.minecraft.block.Block;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExAstrisRebirthBlock {
@@ -49,9 +50,11 @@ public class ExAstrisRebirthBlock {
 		blockBarrelStone = new BlockBarrelStone();
 		GameRegistry.registerBlock(blockBarrelStone, ExAstrisRebirthData.BARREL_STONE);
 		
-		blockBarrelThaumium = new BlockBarrelThaumium();
-		GameRegistry.registerBlock(blockBarrelThaumium, ExAstrisRebirthData.BARREL_THAUMIUM);
-		
+		if (Loader.isModLoaded("Thaumcraft"))
+		{
+			blockBarrelThaumium = ModThaumcraft.blockBarrelThaumium();
+			GameRegistry.registerBlock(blockBarrelThaumium, ExAstrisRebirthData.BARREL_THAUMIUM);
+		}
 		
 		blockHardStone = new BlockHardStone();
 		GameRegistry.registerBlock(blockHardStone, ItemBlockHardStone.class ,ExAstrisRebirthData.HARD_STONE);

@@ -1,6 +1,8 @@
 package kr.loveholy.exastrisrebirth.compatibility;
 
+import net.minecraft.item.Item;
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthData;
+import kr.loveholy.exastrisrebirth.item.ItemHammerMana;
 import cpw.mods.fml.common.registry.GameRegistry;
 import exnihilo.registries.ColorRegistry;
 import exnihilo.registries.CompostRegistry;
@@ -27,6 +29,11 @@ public class ModBotania {
 		{
 			CompostRegistry.register(GameRegistry.findItem("Botania", "flower"), i, 0.125f, ColorRegistry.color("Botania"));
 		}
+	}
+	
+	public static Item itemHammerMana()
+	{
+		return new ItemHammerMana();
 	}
 	
 }
