@@ -128,7 +128,7 @@ dependencies {
 	compile "mcp.mobius.waila:Waila:1.5.8a_1.7.10:dev"
 	compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
 
-    //compile fileTree(dir: 'libs', include: ['*.jar', '*.zip'])
+    compile fileTree(dir: 'libs', include: ['*.jar', '*.zip'])
 }
 
 processResources
