@@ -1,5 +1,6 @@
 package kr.loveholy.exastrisrebirth;
 
+import kr.loveholy.exastrisrebirth.block.BlockBarrelBOP;
 import kr.loveholy.exastrisrebirth.block.BlockBarrelStone;
 import kr.loveholy.exastrisrebirth.block.BlockBarrelTweak;
 import kr.loveholy.exastrisrebirth.block.BlockBeeTrapInfused;
@@ -9,6 +10,7 @@ import kr.loveholy.exastrisrebirth.block.BlockHardStone;
 import kr.loveholy.exastrisrebirth.block.BlockOre;
 import kr.loveholy.exastrisrebirth.block.BlockSieveAutomatic;
 import kr.loveholy.exastrisrebirth.compatibility.ModThaumcraft;
+import kr.loveholy.exastrisrebirth.itemblock.ItemBlockBarrelBOP;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockBarrelTweak;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockHardStone;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockOre;
@@ -23,6 +25,7 @@ public class ExAstrisRebirthBlock {
 	public static Block blockEndCake;
 	public static Block blockBeeTrapInfused;
 	public static Block blockBarrelTweak;
+	public static Block blockBarrelBOP;
 	public static Block blockBarrelThaumium;
 	public static Block blockBarrelStone;
 
@@ -46,6 +49,12 @@ public class ExAstrisRebirthBlock {
 		
 		blockBarrelTweak = new BlockBarrelTweak();
 		GameRegistry.registerBlock(blockBarrelTweak, ItemBlockBarrelTweak.class ,ExAstrisRebirthData.BARREL_TWEAK);
+		
+		if (Loader.isModLoaded("BiomesOPlenty"))
+		{
+			blockBarrelBOP = new BlockBarrelBOP();
+			GameRegistry.registerBlock(blockBarrelBOP, ItemBlockBarrelBOP.class ,ExAstrisRebirthData.BARREL_BOP);
+		}
 		
 		blockBarrelStone = new BlockBarrelStone();
 		GameRegistry.registerBlock(blockBarrelStone, ExAstrisRebirthData.BARREL_STONE);
