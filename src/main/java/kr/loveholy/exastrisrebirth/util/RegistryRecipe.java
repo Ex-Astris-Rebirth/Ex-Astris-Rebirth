@@ -302,6 +302,105 @@ public class RegistryRecipe {
 							'x', new ItemStack(Blocks.stone, 1, 0),
 							'y', new ItemStack(Blocks.stone_slab, 1, 0)
 								}));
+		if (Loader.isModLoaded("BiomesOPlenty")) {
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 0),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 1), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 1));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 1),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 2), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 2));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 2),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 4), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 4));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 3),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 3), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 3));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 4),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 12), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab2"), 1, 3));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 5),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 13), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab2"), 1, 4));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 6),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 5), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 5));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 7),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 14), 
+					'y', new ItemStack(Blocks.wooden_slab, 1, 0));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 8),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 6), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 6));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 9),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 7), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 7));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 10),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 11), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab2"), 1, 2));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 11),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 8), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab2"), 1, 0));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 12),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 0), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab1"), 1, 0));
+			
+			GameRegistry.addRecipe(new ItemStack(ExAstrisRebirthBlock.blockBarrelBOP, 1, 13),
+					"x x",
+					"x x",
+					"xyx",
+					'x', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "planks"), 1, 9), 
+					'y', new ItemStack(GameRegistry.findItem("BiomesOPlenty", "woodenSingleSlab2"), 1, 1));
+		}
 	}
 
 	public static void OreRecipeFactory(Block block, Item item) {

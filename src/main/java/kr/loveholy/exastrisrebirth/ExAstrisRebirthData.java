@@ -6,13 +6,14 @@ public class ExAstrisRebirthData {
 	public static final String MODID = "exastrisrebirth";
 	public static final String MODNAME = "Ex Astris Rebirth";
 	public static final String VERSION = "@VERSION@";
-	public static final String DEPENDENCIES = "required-after:Forge@[10.13.0.1180,);required-after:exnihilo;after:ThermalExpansion;after:Thaumcraft;after:TConstruct;after:TSteelworks;after:RedstoneArsenal;after:RotaryCraft;after:Metallurgy;after:ThermalFoundation;after:EnderIO;after:chisel;after:CoFHAPI|energy";
+	public static final String DEPENDENCIES = "required-after:Forge@[10.13.0.1180,);required-after:exnihilo;after:ThermalExpansion;after:Thaumcraft;after:TConstruct;after:TSteelworks;after:RedstoneArsenal;after:RotaryCraft;after:Metallurgy;after:ThermalFoundation;after:EnderIO;after:chisel;after:CoFHAPI|energy;after:BiomesOPlenty";
     
 	public static final String UNCHARGED_NETHER_STAR = "itemUnchargedNetherStar";
 	public static final String BEE_TRAP_INFUSED = "blockBeeTrapInfused";
 	public static final String END_CAKE = "blockEndCake";
 	public static final String BARREL_THAUMIUM = "blockBarrelThaumium";
 	public static final String BARREL_TWEAK = "blockBarrelTweak";
+	public static final String BARREL_BOP = "blockBarrelBOP";
 	public static final String BARREL_STONE = "blockBarrelStone";
 	public static final String CHISEL_STONE = "itemChiselStone";
 	public static final String NUGGET_ELECTRICAL_STEEL = "itemNuggetElectricalSteel";
@@ -24,6 +25,22 @@ public class ExAstrisRebirthData {
 		"blockBarrelJungle",
 		"blockBarrelAcacia",
 		"blockBarrelDarkOak"
+		}; 
+	public static final String[] BARREL_BOP_NAME = {
+		"blockBarrelCherry",
+		"blockBarrelDark",
+		"blockBarrelEthereal",
+		"blockBarrelFir",
+		"blockBarrelHellbark",
+		"blockBarrelJacaranda",
+		"blockBarrelMagic",
+		"blockBarrelMahogany",
+		"blockBarrelMangrove",
+		"blockBarrelPalm",
+		"blockBarrelPine",
+		"blockBarrelRedwood",
+		"blockBarrelSacredOak",
+		"blockBarrelWillow"
 		}; 
 	public static final String HAMMER_AUTOMATIC = "blockHammerAutomatic";
 	public static final String HARD_STONE = "blockHardStone";

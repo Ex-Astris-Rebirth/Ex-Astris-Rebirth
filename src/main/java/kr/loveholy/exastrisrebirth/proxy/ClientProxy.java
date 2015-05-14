@@ -40,6 +40,7 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ExAstrisRebirthBlock.blockBarrelTweak), new ItemRenderBarrel(barrel));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ExAstrisRebirthBlock.blockBarrelThaumium), new ItemRenderBarrel(barrel));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ExAstrisRebirthBlock.blockBarrelStone), new ItemRenderBarrel(barrel));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ExAstrisRebirthBlock.blockBarrelBOP), new ItemRenderBarrel(barrel));
 
 	}
 	
