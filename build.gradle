@@ -62,10 +62,10 @@ repositories {
 		name "ThermalFoundation"
         artifactPattern "http://addons-origin.cursecdn.com/files/2233/148/[module]-[revision].[ext]"
     }
-	//ivy {
-	//	name "BloodMagic"
-	//		artifactPattern "http://addons.cursecdn.com/files/2222/331/[module]-[revision].[ext]"
-	 //}
+	ivy {
+		name "BloodMagic"
+			artifactPattern "http://addons.cursecdn.com/files/2234/423/[module]-[revision].[ext]"
+	}
 	ivy {
 		name "Metallurgy"
 			artifactPattern "http://addons.cursecdn.com/files/2217/136/[module]-[revision].[ext]"
@@ -85,6 +85,10 @@ repositories {
 	ivy {
 		name "Thaumcraft"
 			artifactPattern "http://addons-origin.cursecdn.com/files/2227/552/[module]-[revision].[ext]"
+	 }
+	 ivy {
+		name "Botania"
+			artifactPattern "http://addons-origin.cursecdn.com/files/2237/982/[module]%20[revision].[ext]"
 	 }
 	maven { url "http://tehnut.info/maven/" }
 	maven { url = "http://mobiusstrip.eu/maven/" } // Waila
@@ -113,10 +117,11 @@ dependencies {
 	compile name: 'RedstoneArsenal', version: "${rars_version}", ext: 'jar'
 	compile name: 'ThermalExpansion', version: "${texpansion_version}", ext: 'jar'
 	compile name: 'ThermalFoundation', version: "${tfoundation_version}", ext: 'jar'
-	//compile name: 'BloodMagic', version: "${bloodmagic_version}", ext: 'jar'
-	compile name: 'Draconic-Evolution', version: "1.7.10-v1.0.1-snapshot_3", ext: 'jar'
-	compile name: 'witchery', version: "1.7.10-0.24.1", ext: 'jar'
-	compile name: 'Thaumcraft', version: "1.7.10-4.2.3.5", ext: 'jar'
+	compile name: 'BloodMagic', version: "${bloodmagic_version}", ext: 'jar'
+	compile name: 'Draconic-Evolution', version: "${draconic_version}", ext: 'jar'
+	compile name: 'witchery', version: "${witchery_version}", ext: 'jar'
+	compile name: 'Thaumcraft', version: "${thaumcraft_version}", ext: 'jar'
+	compile name: 'Botania', version: "${bloodmagic_version}", ext: 'jar'
 	compile "com.teammetallurgy:Metallurgy:1.7.10-4.0.6.80:deobf"
 	compile "com.teammetallurgy:MetallurgyCore:1.7.10-4.0.4.18:deobf"
 	compile "exnihilo:Ex-Nihilo:1.38-32:deobf"
