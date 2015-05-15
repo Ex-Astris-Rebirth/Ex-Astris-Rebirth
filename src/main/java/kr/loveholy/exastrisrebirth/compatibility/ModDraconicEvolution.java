@@ -24,8 +24,8 @@ public class ModDraconicEvolution {
 	
 	public static void addSiftingRegistry()
 	{
-		HammerRegistry.register(GameRegistry.findBlock("exastris", "draconiumdust_dust"), 0, GameRegistry.findItem("DraconicEvolution","draconiumDust"), 0, 0.8f, 0);
-		HammerRegistry.register(GameRegistry.findBlock("exastris", "draconiumdust_dust"), 0, GameRegistry.findItem("DraconicEvolution","draconiumDust"), 0, 0.1f, 0.1f);
+		HammerRegistry.register(GameRegistry.findBlock("exastrisrebirth", "draconiumdust_dust"), 0, GameRegistry.findItem("DraconicEvolution","draconiumDust"), 0, 0.8f, 0);
+		HammerRegistry.register(GameRegistry.findBlock("exastrisrebirth", "draconiumdust_dust"), 0, GameRegistry.findItem("DraconicEvolution","draconiumDust"), 0, 0.1f, 0.1f);
 	}
 	
 	public static void addChestSmeltingDoubling()
