@@ -64,7 +64,7 @@ repositories {
     }
 	ivy {
 		name "BloodMagic"
-			artifactPattern "http://addons.cursecdn.com/files/2222/331/[module]-[revision].[ext]"
+			artifactPattern "https://www.dropbox.com/sh/0aqvalqobu61t44/AADZq-GuoDeuNzgg6zueVM_Ca/[module]-[revision].[ext]"
 	 }
 	ivy {
 		name "Metallurgy"
