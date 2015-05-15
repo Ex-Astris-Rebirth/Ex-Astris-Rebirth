@@ -51,6 +51,7 @@ public class ExAstrisRebirthData {
 		"blockQuadrupleHardStone"
 		};
 	public static final String SIEVE_AUTOMATIC = "blockSieveAutomatic";
+	public static final String HAMMER_BOUND = "itemHammerBound";
 	public static final String HAMMER_RF = "itemHammerRF";
 	public static final String CROOK_RF = "itemCrookRF";
 	public static final String ELDRITCH_PORTAL_SPAWNER = "itemEldritchPortalSpawner";
@@ -117,6 +118,9 @@ public class ExAstrisRebirthData {
 	
 	public static String allowUnchargedNetherstarKey = "unchargedNetherStar";
 	public static boolean allowUnchargedNetherstar = true;
+	
+	public static String allowHammerBoundKey = "hammerBound";
+	public static boolean allowHammerBound = true;
 	
 	public static String allowBotaniaCompostingKey = "botaniaComposting";
 	public static boolean allowBotaniaComposting = true;
@@ -264,6 +268,7 @@ public class ExAstrisRebirthData {
 		allowBeeTrapInfused  = config.get(categoryMagicBees, allowBeeTrapInfusedKey, allowBeeTrapInfused, "Enable Mana Infused Hives").getBoolean();
 		oreYelloriumChance = config.get(categoryOres, oreYelloriumChanceKey, oreYelloriumChance).getInt();
 		allowUnchargedNetherstar  = config.get(categoryBloodMagic, allowUnchargedNetherstarKey, allowUnchargedNetherstar, "Enable Uncharged Nether Star").getBoolean();
+		allowHammerBound  = config.get(categoryBloodMagic, allowHammerBoundKey, allowHammerBound, "Enable Bound Hammer").getBoolean();
 		allowBotaniaComposting = config.get(categoryBotania, allowBotaniaCompostingKey, true, "Allow Botania Mystical Flowers to be composted").getBoolean();
 		allowHammerAutomatic = config.get(categoryExAstrisRebirth, allowHammerAutomaticKey, allowHammerAutomatic, "Enable Automatic Hammer").getBoolean();
 		allowUpgrades = config.get(categoryExAstrisRebirth, allowUpgradesKey, true, "Allow Upgrades for Automatic Sieve/Hammer").getBoolean();

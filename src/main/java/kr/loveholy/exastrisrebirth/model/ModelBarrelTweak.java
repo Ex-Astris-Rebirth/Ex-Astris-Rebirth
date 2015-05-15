@@ -41,10 +41,7 @@ public class ModelBarrelTweak extends ModelBarrel {
 	};
 	
 	public ResourceLocation getBarrelTexture(Block block, int meta) {
-		if(block == ExAstrisRebirthBlock.blockBarrelBOP)
-		{
-			return texturesbop[meta];
-		}else if(block == ExAstrisRebirthBlock.blockBarrelTweak)
+		if(block == ExAstrisRebirthBlock.blockBarrelTweak)
     	{
     		return texturestweak[meta];
     	}else if(block == ExAstrisRebirthBlock.blockBarrelStone)
@@ -53,7 +50,10 @@ public class ModelBarrelTweak extends ModelBarrel {
     	}else if(block == ExAstrisRebirthBlock.blockBarrelThaumium)
     	{
     		return texturestweak[texturestweak.length -1];
-    	}
+    	}else if(block == ExAstrisRebirthBlock.blockBarrelBOP)
+		{
+			return texturesbop[meta];
+		}
     	return null;
 	}
 }

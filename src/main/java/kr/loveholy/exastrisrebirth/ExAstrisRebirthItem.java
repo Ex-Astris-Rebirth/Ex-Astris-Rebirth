@@ -1,5 +1,6 @@
 package kr.loveholy.exastrisrebirth;
 
+import kr.loveholy.exastrisrebirth.compatibility.ModBloodMagic;
 import kr.loveholy.exastrisrebirth.compatibility.ModBotania;
 import kr.loveholy.exastrisrebirth.compatibility.ModRedstoneArsenal;
 import kr.loveholy.exastrisrebirth.compatibility.ModThaumcraft;
@@ -32,6 +33,8 @@ public class ExAstrisRebirthItem {
 	public static Item itemHammerThaumium;
 	
 	public static Item itemEldritchPortalSpawner;
+	
+	public static Item itemHammerBound;
 	public static void init() {
 		
 		itemSieveUpgrade = new ItemSieveUpgrade();
@@ -86,6 +89,11 @@ public class ExAstrisRebirthItem {
 			
 			itemEldritchPortalSpawner = ModThaumcraft.itemEldritchPortalSpawner();
 			GameRegistry.registerItem(itemEldritchPortalSpawner, ExAstrisRebirthData.ELDRITCH_PORTAL_SPAWNER);
+		}
+		if(Loader.isModLoaded("AWWayofTime"))
+		{
+			itemHammerBound = ModBloodMagic.itemHammerBound();
+			GameRegistry.registerItem(itemHammerBound, ExAstrisRebirthData.HAMMER_BOUND);
 		}
 	}
 }
