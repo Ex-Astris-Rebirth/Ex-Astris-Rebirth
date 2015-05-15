@@ -62,10 +62,10 @@ repositories {
 		name "ThermalFoundation"
         artifactPattern "http://addons-origin.cursecdn.com/files/2233/148/[module]-[revision].[ext]"
     }
-	ivy {
-		name "BloodMagic"
-			artifactPattern "https://www.dropbox.com/sh/0aqvalqobu61t44/AADZq-GuoDeuNzgg6zueVM_Ca/[module]-[revision].[ext]"
-	 }
+	//ivy {
+	//	name "BloodMagic"
+	//		artifactPattern "http://addons.cursecdn.com/files/2222/331/[module]-[revision].[ext]"
+	 //}
 	ivy {
 		name "Metallurgy"
 			artifactPattern "http://addons.cursecdn.com/files/2217/136/[module]-[revision].[ext]"
@@ -113,7 +113,7 @@ dependencies {
 	compile name: 'RedstoneArsenal', version: "${rars_version}", ext: 'jar'
 	compile name: 'ThermalExpansion', version: "${texpansion_version}", ext: 'jar'
 	compile name: 'ThermalFoundation', version: "${tfoundation_version}", ext: 'jar'
-	compile name: 'BloodMagic', version: "${bloodmagic_version}", ext: 'jar'
+	//compile name: 'BloodMagic', version: "${bloodmagic_version}", ext: 'jar'
 	compile name: 'Draconic-Evolution', version: "1.7.10-v1.0.1-snapshot_3", ext: 'jar'
 	compile name: 'witchery', version: "1.7.10-0.24.1", ext: 'jar'
 	compile name: 'Thaumcraft', version: "1.7.10-4.2.3.5", ext: 'jar'
