@@ -27,7 +27,7 @@ import exnihilo.blocks.tileentities.TileEntityBarrel.BarrelMode;
 public class BlockBarrelTweak extends BlockBarrel
 {
 	public BlockBarrelTweak() {
-		super(Material.rock);
+		super(Material.wood);
 		setCreativeTab(ExAstrisRebirth.TAB);
 		setHardness(2.0f);
 		setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 1.0F, 0.9F);
