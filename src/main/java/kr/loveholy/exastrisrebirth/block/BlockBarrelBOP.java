@@ -20,7 +20,7 @@ public class BlockBarrelBOP extends BlockBarrelTweak{
 	private IIcon[] iconsbop;
 	
 	public BlockBarrelBOP() {
-		super(Material.rock);
+		super(Material.wood);
 		setCreativeTab(ExAstrisRebirth.TAB);
 		setHardness(2.0f);
 		setBlockBounds(0.1F, 0.0F, 0.1F, 0.9F, 1.0F, 0.9F);
