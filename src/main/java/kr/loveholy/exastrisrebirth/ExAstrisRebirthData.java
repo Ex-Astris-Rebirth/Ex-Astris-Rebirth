@@ -247,7 +247,7 @@ public class ExAstrisRebirthData {
 	public static boolean allowUpgrades;
 	public static String allowUpgradesKey = "allowUpgradesKey";
 	
-	public static String allowMiniSmelteryKey = "hardStone";
+	public static String allowMiniSmelteryKey = "allowMiniSmeltery";
 	public static boolean allowMiniSmeltery = true;
 	
 	public static String sieveMakeParticlesKey = "sieve Make Particles";
