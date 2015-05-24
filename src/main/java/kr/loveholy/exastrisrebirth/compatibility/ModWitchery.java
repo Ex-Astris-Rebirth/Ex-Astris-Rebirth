@@ -16,7 +16,7 @@ public class ModWitchery {
 	{
 		addSifting();
 		if (ExAstrisRebirthData.witcheryEnableCovenWitch)
-			BarrelRecipeRegistry.addMobRecipe(Fluids.fluidWitchWater, new ItemStack(GameRegistry.findItem("witchery", "witchhand")), EntityCovenWitch.class, "portal", null);
+			BarrelRecipeRegistry.addMobRecipe(Fluids.fluidWitchWater, new ItemStack(GameRegistry.findItem("witchery", "witchhand")), EntityCovenWitch.class, "portal", new ItemStack(GameRegistry.findItem("witchery", "witchhand")));
 	}
 	
 	private static void addSifting()
