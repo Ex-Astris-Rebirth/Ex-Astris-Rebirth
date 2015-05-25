@@ -64,12 +64,13 @@ public class ItemHammerRF extends ItemToolRF {
 		int blockMeta = world.getBlockMetadata(X,Y,Z);
 		int fortune = EnchantmentHelper.getFortuneModifier(player);
 		boolean valid = false;
-
-		ArrayList<Smashable> rewards = HammerRegistry.getRewards(block, blockMeta);
 		
 		if (getEnergyStored(item) < getEnergyPerUse(item))
 			return false;
-		if (rewards.size() > 0 && block.getHarvestLevel(blockMeta) <= this.toolMaterial.getHarvestLevel())
+			
+		ArrayList<Smashable> rewards = HammerRegistry.getRewards(block, blockMeta);
+		
+		if (rewards != null && rewards.size() > 0 && block.getHarvestLevel(blockMeta) <= this.toolMaterial.getHarvestLevel())
 		{
 			Iterator<Smashable> it = rewards.iterator();
 			while(it.hasNext())
