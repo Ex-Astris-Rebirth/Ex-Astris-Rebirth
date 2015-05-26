@@ -26,7 +26,7 @@ public class TileEntityBarrelTweak extends TileEntityBarrel{
 		Block bl = worldObj.getBlock(xCoord, yCoord, zCoord);
 		if(getMode() == BarrelMode.FLUID && this.isFull() && bl != ExAstrisRebirthBlock.blockBarrelThaumium)
 		{
-			if (fluid.fluidID == Fluids.fluidWitchWater.getID())
+			if (fluid.getFluid().equals(Fluids.fluidWitchWater))
 			{
 				if(Block.getBlockFromItem(item) == Blocks.obsidian)
 				{

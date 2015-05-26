@@ -19,7 +19,7 @@ public class SlotSieveAutomatic extends Slot {
 
 	@Override
 	public boolean isItemValid(ItemStack itemstack) {
-		if (SieveRegistry.Contains(Block.getBlockFromItem(itemstack.getItem()),
+		if (SieveRegistry.registered(Block.getBlockFromItem(itemstack.getItem()),
 				itemstack.getItemDamage()) && this.id == 0) {
 			return true;
 		} else if (this.id == 21) {

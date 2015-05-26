@@ -29,7 +29,7 @@ version = "MC${minecraft_version}-${mod_version}-${System.getenv().BUILD_NUMBER}
 group= "kr.loveholy.exastrisrebirth" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Ex-Astris-Rebirth"
 minecraft {
-    version = "1.7.10-10.13.2.1291"
+    version = "${minecraft_version}-${forge_version}"
     assetDir = "eclipse/assets"
 	 
 	 replace "@VERSION@", project.version
@@ -117,17 +117,19 @@ dependencies {
 	compile name: 'Draconic-Evolution', version: "${draconic_version}", ext: 'jar'
 	compile name: 'witchery', version: "${witchery_version}", ext: 'jar'
 	compile name: 'Thaumcraft', version: "${thaumcraft_version}", ext: 'jar'
-	compile "com.teammetallurgy:Metallurgy:1.7.10-4.0.6.80:deobf"
-	compile "com.teammetallurgy:MetallurgyCore:1.7.10-4.0.4.18:deobf"
-	compile "exnihilo:Ex-Nihilo:1.38-32:deobf"
-	compile "com.cricketcraft.chisel:Chisel2:2.3.7.85:deobf"
+	compile "com.teammetallurgy:Metallurgy:${metallurgy_version}:deobf"
+	compile "com.teammetallurgy:MetallurgyCore:${metallurgycore_version}:deobf"
+	compile "exnihilo:Ex-Nihilo:${exnihilo_version}:deobf"
+	compile "com.cricketcraft.chisel:Chisel2:${chisel_version}:deobf"
 
-	compile "nf.fr.ephys.cookiecore:CookieCore:1.7.10-1.3.1-5:deobf"
-	compile "nf.fr.ephys.tsteelworks:TSteelworks:1.7.10-1.1.0-6:deobf"
-	compile "tconstruct:TConstruct:1.7.10-1.8.2.build876:deobf"
-	compile "mcp.mobius.waila:Waila:1.5.8a_1.7.10:dev"
-	compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
+	compile "nf.fr.ephys.cookiecore:CookieCore:${cookiecore_version}:deobf"
+	compile "nf.fr.ephys.tsteelworks:TSteelworks:${tsteelworks_version}:deobf"
+	compile "com.github.glitchfiend.biomesoplenty:BiomesOPlenty:${bop_version}:deobf"
+	compile "mcp.mobius.waila:Waila:${waila_version}:dev"
+	compile "codechicken:CodeChickenCore:${codechickencore_version}:dev"
 
+    compile "tconstruct:TConstruct:${tconstruct_version}:deobf"
+	// Botania
     compile fileTree(dir: 'libs', include: ['*.jar', '*.zip'])
 }
 

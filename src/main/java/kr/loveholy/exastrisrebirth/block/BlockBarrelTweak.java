@@ -19,7 +19,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import exnihilo.ENBlocks;
-import exnihilo.ENItems;
 import exnihilo.Fluids;
 import exnihilo.blocks.BlockBarrel;
 import exnihilo.blocks.tileentities.TileEntityBarrel.BarrelMode;
@@ -77,7 +76,8 @@ public class BlockBarrelTweak extends BlockBarrel
 				{
 					if (barrel.getMode() == BarrelMode.FLUID && barrel.isFull())
 					{
-						if (barrel.fluid.fluidID == Fluids.fluidWitchWater.getID())
+						//
+						if (barrel.fluid.getFluid().equals(Fluids.fluidWitchWater))
 						{
 							if(item.getItem() == Item.getItemFromBlock(Blocks.obsidian))
 							{
