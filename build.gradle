@@ -118,6 +118,10 @@ repositories {
 delete("libs")
 project.mkdir("libs")
 	
+	
+def tc = new File("libs/Thaumcraft-${thaumcraft_version}.jar")
+new URL("https://dl.dropboxusercontent.com/u/47135879/Thaumcraft-${thaumcraft_version}.jar").withInputStream{ i -> tc.withOutputStream{ it << i }}
+
 def fp = new File("libs/FoodPlus-${foodplus_version}.jar")
 new URL("http://loveholy.kr/libs/FoodPlus-${foodplus_version}.jar").withInputStream{ i -> fp.withOutputStream{ it << i }}
 	
@@ -134,7 +138,7 @@ dependencies {
 	compile name: 'BloodMagic', version: "${bloodmagic_version}", ext: 'jar'
 	compile name: 'Draconic-Evolution', version: "${draconic_version}", ext: 'jar'
 	compile name: 'witchery', version: "${witchery_version}", ext: 'jar'
-	compile name: 'Thaumcraft', version: "${thaumcraft_version}", ext: 'jar'
+//	compile name: 'Thaumcraft', version: "${thaumcraft_version}", ext: 'jar'
 	compile "com.teammetallurgy:Metallurgy:${metallurgy_version}:deobf"
 	compile "com.teammetallurgy:MetallurgyCore:${metallurgycore_version}:deobf"
 	compile "exnihilo:Ex-Nihilo:${exnihilo_version}:deobf"
