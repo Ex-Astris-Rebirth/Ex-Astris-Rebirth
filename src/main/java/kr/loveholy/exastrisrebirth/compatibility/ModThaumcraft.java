@@ -201,7 +201,7 @@ public class ModThaumcraft {
 						.setParents(CATEGORY_NAME + "_BEEHIVES")
 						.registerResearchItem();
 
-				//ThaumcraftApi.addWarpToResearch(CATEGORY_NAME+ "_ADVANCEBEEHIVES", 2);
+				ThaumcraftApi.addWarpToResearch(CATEGORY_NAME+ "_ADVANCEBEEHIVES", 2);
 			}
 		}
 
