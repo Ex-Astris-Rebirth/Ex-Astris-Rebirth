@@ -44,47 +44,51 @@ repositories {
     maven { url 'http://maven.tterrag.com/' }
 	ivy {
 		name "CoFHLib"
-		artifactPattern "http://addons-origin.cursecdn.com/files/2233/88/[module]-[revision].[ext]"
+		artifactPattern "http://addons-origin.cursecdn.com/files/2236/777/[module]-[revision].[ext]"
 	}
 	ivy {
 		name "CoFHCore"
-        artifactPattern "http://addons-origin.cursecdn.com/files/2233/150/[module]-[revision].[ext]"
+		artifactPattern "http://addons-origin.cursecdn.com/files/2234/199/[module]-[revision].[ext]"
     }
 	ivy {
 		name "RedstoneArsenal"
-        artifactPattern "http://addons-origin.cursecdn.com/files/2232/684/[module]-[revision].[ext]"
+        artifactPattern "http://addons-origin.cursecdn.com/files/2233/786/[module]-[revision].[ext]"
     }
 	ivy {
 		name "ThermalExpansion"
-        artifactPattern "http://addons-origin.cursecdn.com/files/2233/141/[module]-[revision].[ext]"
+        artifactPattern "http://addons-origin.cursecdn.com/files/2233/797/[module]-[revision].[ext]"
     }
 	ivy {
 		name "ThermalFoundation"
-        artifactPattern "http://addons-origin.cursecdn.com/files/2233/148/[module]-[revision].[ext]"
+        artifactPattern "http://addons-origin.cursecdn.com/files/2233/781/[module]-[revision].[ext]"
+    }
+	ivy {
+		name "MineFactoryReloaded"
+        artifactPattern "http://addons-origin.cursecdn.com/files/2233/907/[module]-[revision].[ext]"
     }
 	ivy {
 		name "BloodMagic"
-			artifactPattern "http://addons.cursecdn.com/files/2234/423/[module]-[revision].[ext]"
+		artifactPattern "http://addons.cursecdn.com/files/2234/423/[module]-[revision].[ext]"
 	}
 	ivy {
 		name "Metallurgy"
-			artifactPattern "http://addons.cursecdn.com/files/2217/136/[module]-[revision].[ext]"
+		artifactPattern "http://addons.cursecdn.com/files/2217/136/[module]-[revision].[ext]"
 	 }
 	ivy {
 		name "MetallurgyCore"
-			artifactPattern "http://addons.cursecdn.com/files/2215/714/[module]-[revision].[ext]"
+		artifactPattern "http://addons.cursecdn.com/files/2215/714/[module]-[revision].[ext]"
 	 }
 	ivy {
 		name "Draconic-Evolution"
-			artifactPattern "http://addons.cursecdn.com/files/2225/633/[module]-[revision].[ext]"
+		artifactPattern "http://addons.cursecdn.com/files/2238/2/[module]-[revision].[ext]"
 	 }
 	ivy {
 		name "witchery"
-			artifactPattern "http://addons-origin.cursecdn.com/files/2234/410/[module]-[revision].[ext]"
+		artifactPattern "http://addons-origin.cursecdn.com/files/2234/410/[module]-[revision].[ext]"
 	 }
 	ivy {
 		name "Thaumcraft"
-			artifactPattern "http://addons-origin.cursecdn.com/files/2227/552/[module]-[revision].[ext]"
+		artifactPattern "http://addons-origin.cursecdn.com/files/2227/552/[module]-[revision].[ext]"
 	 }
 	maven { url "http://tehnut.info/maven/" }
 	maven { url = "http://mobiusstrip.eu/maven/" } // Waila
@@ -111,12 +115,22 @@ repositories {
     }
 }
 
+delete("libs")
+project.mkdir("libs")
+	
+def fp = new File("libs/FoodPlus-${foodplus_version}.jar")
+new URL("http://loveholy.kr/libs/FoodPlus-${foodplus_version}.jar").withInputStream{ i -> fp.withOutputStream{ it << i }}
+	
+def am = new File("libs/${minecraft_version}_AM2-${am_version}.jar")
+new URL("http://loveholy.kr/libs/${minecraft_version}_AM2-${am_version}.jar").withInputStream{ i -> am.withOutputStream{ it << i }}
+
 dependencies {
    compile name: 'CoFHLib', version: "${cofhlib_version}", ext: 'jar'
 	compile name: 'CoFHCore', version: "${cofhcore_version}", ext: 'jar'
 	compile name: 'RedstoneArsenal', version: "${rars_version}", ext: 'jar'
 	compile name: 'ThermalExpansion', version: "${texpansion_version}", ext: 'jar'
 	compile name: 'ThermalFoundation', version: "${tfoundation_version}", ext: 'jar'
+	compile name: 'MineFactoryReloaded', version: "${mfr_version}", ext: 'jar'
 	compile name: 'BloodMagic', version: "${bloodmagic_version}", ext: 'jar'
 	compile name: 'Draconic-Evolution', version: "${draconic_version}", ext: 'jar'
 	compile name: 'witchery', version: "${witchery_version}", ext: 'jar'
@@ -134,6 +148,7 @@ dependencies {
 
     compile "tconstruct:TConstruct:${tconstruct_version}:deobf"
 	compile "vazkii.botania:Botania:${botania_version}:deobf"
+	//FOOD PLUS,
     compile fileTree(dir: 'libs', include: ['*.jar', '*.zip'])
 }
 
@@ -189,3 +204,4 @@ publishing {
         }
     }
 }
+

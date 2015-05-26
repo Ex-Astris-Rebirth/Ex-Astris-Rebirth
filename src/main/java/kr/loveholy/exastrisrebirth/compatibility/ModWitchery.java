@@ -2,6 +2,9 @@ package kr.loveholy.exastrisrebirth.compatibility;
 
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthData;
 
+import com.emoniph.witchery.Witchery;
+import com.emoniph.witchery.WitcheryFluids;
+import com.emoniph.witchery.WitcheryItems;
 import com.emoniph.witchery.entity.EntityCovenWitch;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -21,10 +24,10 @@ public class ModWitchery {
 	
 	private static void addSifting()
 	{
-		SieveRegistry.register(Blocks.grass, 0, GameRegistry.findItem("witchery", "seedsartichoke"), 0, ExAstrisRebirthData.witcherySeedsChance);
-		SieveRegistry.register(Blocks.grass, 0, GameRegistry.findItem("witchery", "seedswolfsbane"), 0, ExAstrisRebirthData.witcherySeedsChance);
-		SieveRegistry.register(Blocks.grass, 0, GameRegistry.findItem("witchery", "seedsmandrake"), 0, ExAstrisRebirthData.witcherySeedsChance);
-		SieveRegistry.register(Blocks.grass, 0, GameRegistry.findItem("witchery", "seedsbelladonna"), 0, ExAstrisRebirthData.witcherySeedsChance);
-		SieveRegistry.register(Blocks.grass, 0, GameRegistry.findItem("witchery", "seedssnowbell"), 0, ExAstrisRebirthData.witcherySeedsChance);
+		SieveRegistry.register(Blocks.grass, 0, Witchery.Items.SEEDS_ARTICHOKE , 0, ExAstrisRebirthData.witcherySeedsChance);//seedsartichoke
+		SieveRegistry.register(Blocks.grass, 0, Witchery.Items.SEEDS_WOLFSBANE, 0, ExAstrisRebirthData.witcherySeedsChance);//seedswolfsbane
+		SieveRegistry.register(Blocks.grass, 0, Witchery.Items.SEEDS_MANDRAKE, 0, ExAstrisRebirthData.witcherySeedsChance);//seedsmandrake
+		SieveRegistry.register(Blocks.grass, 0, Witchery.Items.SEEDS_BELLADONNA, 0, ExAstrisRebirthData.witcherySeedsChance);//seedsbelladonna
+		SieveRegistry.register(Blocks.grass, 0, Witchery.Items.SEEDS_SNOWBELL, 0, ExAstrisRebirthData.witcherySeedsChance);//seedssnowbell
 	}
 }

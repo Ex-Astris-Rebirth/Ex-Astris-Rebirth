@@ -1,5 +1,7 @@
 package kr.loveholy.exastrisrebirth.compatibility;
 
+import com.foodplus.core.FoodPlusBlocks;
+
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthData;
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthItem;
 import kr.loveholy.exastrisrebirth.item.ItemSeedFoodPlus;
@@ -14,13 +16,13 @@ import exnihilo.registries.SieveRegistry;
 public class ModFoodPlus {
 	public static void init()
 	{
-		Block[] saplingBlocks = {GameRegistry.findBlock("FoodPlus", "cherry_sapling"),
-			GameRegistry.findBlock("FoodPlus", "banana_sapling"),
-			GameRegistry.findBlock("FoodPlus", "orange_sapling"),
-			GameRegistry.findBlock("FoodPlus", "kiwi_sapling"),
-			GameRegistry.findBlock("FoodPlus", "walnut_sapling"),
-			GameRegistry.findBlock("FoodPlus", "coconut_sapling"),
-			GameRegistry.findBlock("FoodPlus", "pear_sapling")};	
+		Block[] saplingBlocks = {FoodPlusBlocks.CherrySapling,//cherry_sapling
+				FoodPlusBlocks.BananaSapling,//banana_sapling
+				FoodPlusBlocks.OrangeSapling,//orange_sapling
+				FoodPlusBlocks.KiwiSapling,//kiwi_sapling
+				FoodPlusBlocks.WalnutSapling,//walnut_sapling
+				FoodPlusBlocks.CoconutSapling,//coconut_sapling
+				FoodPlusBlocks.PearSapling};//pear_sapling
 		ItemSeedFoodPlus.addPlants(saplingBlocks);
 		
 		SieveRegistry.register(Blocks.grass, ExAstrisRebirthItem.itemSeedFoodPlus, 0, ExAstrisRebirthData.foodPlusSaplingSiftingChance);

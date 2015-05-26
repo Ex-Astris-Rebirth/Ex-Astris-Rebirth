@@ -1,5 +1,10 @@
 package kr.loveholy.exastrisrebirth.compatibility;
 
+import com.brandon3055.draconicevolution.DraconicEvolution;
+import com.brandon3055.draconicevolution.common.ModItems;
+import com.brandon3055.draconicevolution.common.items.DraconicCore;
+import com.brandon3055.draconicevolution.common.items.DraconiumDust;
+
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthData;
@@ -19,13 +24,13 @@ public class ModDraconicEvolution {
 	
 	private static void addOres()
 	{
-		OreRegistry.createEnderOre("draconiumdust", new Color("BF3FBF"), ExAstrisRebirthData.oreDraconiumChance, GameRegistry.findItem("DraconicEvolution","draconiumDust"), true);
+		OreRegistry.createEnderOre("draconiumdust", new Color("BF3FBF"), ExAstrisRebirthData.oreDraconiumChance, ModItems.draconiumDust, true);
 	}
 	
 	public static void addSiftingRegistry()
 	{
-		HammerRegistry.register(GameRegistry.findBlock("exastrisrebirth", "draconiumdust_dust"), 0, GameRegistry.findItem("DraconicEvolution","draconiumDust"), 0, 0.8f, 0);
-		HammerRegistry.register(GameRegistry.findBlock("exastrisrebirth", "draconiumdust_dust"), 0, GameRegistry.findItem("DraconicEvolution","draconiumDust"), 0, 0.1f, 0.1f);
+		HammerRegistry.register(GameRegistry.findBlock("exastrisrebirth", "draconiumdust_dust"), 0, ModItems.draconiumDust, 0, 0.8f, 0);
+		HammerRegistry.register(GameRegistry.findBlock("exastrisrebirth", "draconiumdust_dust"), 0, ModItems.draconiumDust, 0, 0.1f, 0.1f);
 	}
 	
 	public static void addChestSmeltingDoubling()

@@ -18,6 +18,10 @@ public class ModChisel {
 
 	public static void init()
 	{
+		addSieveRegistry();
+	}
+	public static void addSieveRegistry()
+	{
 		if (ExAstrisRebirthData.allowChiselBlocksFromSifting)
 		{
 			SieveRegistry.register(Blocks.stone, 0, ExAstrisRebirthItem.itemChiselStone, 0, 1);
@@ -33,9 +37,7 @@ public class ModChisel {
 			GameRegistry.addRecipe(new ItemStack(GameRegistry.findItem("chisel", "marble"), 1, 0), new Object[]{"aa","aa", 'a', new ItemStack(ExAstrisRebirthItem.itemChiselStone, 1, 0)});
 			GameRegistry.addRecipe(new ItemStack(GameRegistry.findItem("chisel", "limestone"), 1, 0), new Object[]{"aa","aa", 'a', new ItemStack(ExAstrisRebirthItem.itemChiselStone, 1, 1)});
 		}
-		
 	}
-
 	public static void sendIMC()
 	{
 		if (ExAstrisRebirthData.allowBarrelsToBeChiselled)

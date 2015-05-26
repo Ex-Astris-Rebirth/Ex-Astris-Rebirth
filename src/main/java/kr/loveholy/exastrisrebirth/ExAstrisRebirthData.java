@@ -82,6 +82,7 @@ public class ExAstrisRebirthData {
     public static String categoryThermalExpansion="ThermalExpansion";
     public static String categoryWitchery="Witchery";
     public static String categoryRotaryCraft="RotaryCraft";
+    public static String categoryAM2="ArsMagica2";
 
 	public static String allowSieveAutomaticKey = "autoSieve";
 	public static boolean allowSieveAutomatic = true;
@@ -253,6 +254,15 @@ public class ExAstrisRebirthData {
 	public static String sieveMakeParticlesKey = "sieve Make Particles";
 	public static boolean sieveMakeParticles = true;
 	
+	public static String oreAM2ChanceKey = "arsmagica2ores";
+	public static int oreAM2Chance = 128;
+
+	public static String allowAM2HeatKey = "arsmagica2heat";
+	public static boolean allowAM2Heat = true;
+	
+	public static String allowAM2BarrelKey = "arsmagica2liquidEssence";
+	public static boolean allowAM2Barrel = true;
+	
 	public static void load(Configuration config) {
 		enableEIORecipes = config.get(categoryExAstrisRebirth, enableEIORecipesKey, true, "Enable EnderIO Recipes").getBoolean();
 		enableTERecipes = config.get(categoryExAstrisRebirth, enableTERecipesKey, true, "Enable Thermal Expansion/Foundation Recipes").getBoolean();
@@ -329,6 +339,12 @@ public class ExAstrisRebirthData {
 		
 		//ROTARY
 		allowHardStone  = config.get(categoryRotaryCraft, allowHardStoneKey, allowHardStone, "Enable Hard Stone").getBoolean();
+
+		//AM2
+		oreAM2Chance = config.get(categoryAM2, oreAM2ChanceKey, oreAM2Chance).getInt();
+		allowAM2Heat  = config.get(categoryAM2, allowAM2HeatKey, allowAM2Heat, "Add AM2 Items as a heat source for Crucible etc").getBoolean();
+		allowAM2Heat  = config.get(categoryAM2, allowAM2BarrelKey, allowAM2Barrel, "Add AM2 Liquid Eccense Barrel Registry").getBoolean();
+		
 		
 	}
 }

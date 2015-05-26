@@ -1,5 +1,6 @@
 package kr.loveholy.exastrisrebirth.compatibility;
 
+import powercrystals.minefactoryreloaded.setup.MFRThings;
 import cpw.mods.fml.common.registry.GameRegistry;
 import exnihilo.registries.ColorRegistry;
 import exnihilo.registries.CompostRegistry;
@@ -22,10 +23,10 @@ public class ModMineFactoryReloaded {
 	public static void addCompostRegistry()
 	{
 		
-		CompostRegistry.register(GameRegistry.findItem("MineFactoryReloaded", "rubberwood.sapling"), 0, 0.125F, ColorRegistry.color("rubberwood"));
-		CompostRegistry.register(GameRegistry.findItem("MineFactoryReloaded", "rubberwood.sapling"), 1, 0.125F, ColorRegistry.color("rubberwood"));
-		CompostRegistry.register(GameRegistry.findItem("MineFactoryReloaded", "rubberwood.leaves"), 0, 0.125F, ColorRegistry.color("rubberwood"));
-		CompostRegistry.register(GameRegistry.findItem("MineFactoryReloaded", "rubberwood.leaves"), 1, 0.125F, ColorRegistry.color("rubberwood"));
+		CompostRegistry.register(MFRThings.rubberSaplingItem, 0, 0.125F, ColorRegistry.color("rubberwood"));
+		CompostRegistry.register(MFRThings.rubberSaplingItem, 1, 0.125F, ColorRegistry.color("rubberwood"));
+		CompostRegistry.register(MFRThings.rubberLeavesItem, 0, 0.125F, ColorRegistry.color("rubberwood"));
+		CompostRegistry.register(MFRThings.rubberLeavesItem, 1, 0.125F, ColorRegistry.color("rubberwood"));
 		
 	}
 }
