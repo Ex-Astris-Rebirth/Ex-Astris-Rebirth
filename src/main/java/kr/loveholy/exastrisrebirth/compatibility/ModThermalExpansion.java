@@ -2,6 +2,9 @@ package kr.loveholy.exastrisrebirth.compatibility;
 
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthData;
 import kr.loveholy.exastrisrebirth.ExAstrisRebirthItem;
+import kr.loveholy.exastrisrebirth.block.BlockHammerAutomatic;
+import kr.loveholy.exastrisrebirth.block.BlockSieveAutomatic;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -66,5 +69,15 @@ public class ModThermalExpansion {
 		{
 			BarrelRecipeRegistry.addMobRecipe(FluidRegistry.WATER, new ItemStack(ExAstrisRebirthItem.itemDollFreezing), EntityBlizz.class, "snowballpoof", new ItemStack(ExAstrisRebirthItem.itemDollFreezing));
 		}
+	}
+	
+	public static Block blockSieveAutomatic()
+	{
+		return new BlockSieveAutomatic();
+	}
+	
+	public static Block blockHammerAutomatic()
+	{
+		return new BlockHammerAutomatic();
 	}
 }

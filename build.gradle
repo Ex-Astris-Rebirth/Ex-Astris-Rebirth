@@ -90,6 +90,10 @@ repositories {
 		name "Thaumcraft"
 		artifactPattern "http://addons-origin.cursecdn.com/files/2227/552/[module]-[revision].[ext]"
 	 }
+	ivy {
+		name "natura"
+		artifactPattern "http://addons-origin.cursecdn.com/files/2216/125/[module]-[revision].[ext]"
+	 }
 	maven { url "http://tehnut.info/maven/" }
 	maven { url = "http://mobiusstrip.eu/maven/" } // Waila
 	maven { url = "http://chickenbones.net/maven/" } // CCC & NEI
@@ -135,6 +139,7 @@ dependencies {
 	compile name: 'Draconic-Evolution', version: "${draconic_version}", ext: 'jar'
 	compile name: 'witchery', version: "${witchery_version}", ext: 'jar'
 	compile name: 'Thaumcraft', version: "${thaumcraft_version}", ext: 'jar'
+	compile name: 'natura', version: "${natura_version}", ext: 'jar'
 	compile "com.teammetallurgy:Metallurgy:${metallurgy_version}:deobf"
 	compile "com.teammetallurgy:MetallurgyCore:${metallurgycore_version}:deobf"
 	compile "exnihilo:Ex-Nihilo:${exnihilo_version}:deobf"

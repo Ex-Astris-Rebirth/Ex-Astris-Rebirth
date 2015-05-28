@@ -5,11 +5,10 @@ import kr.loveholy.exastrisrebirth.block.BlockBarrelStone;
 import kr.loveholy.exastrisrebirth.block.BlockBarrelTweak;
 import kr.loveholy.exastrisrebirth.block.BlockBeeTrapInfused;
 import kr.loveholy.exastrisrebirth.block.BlockEndCake;
-import kr.loveholy.exastrisrebirth.block.BlockHammerAutomatic;
 import kr.loveholy.exastrisrebirth.block.BlockHardStone;
 import kr.loveholy.exastrisrebirth.block.BlockOre;
-import kr.loveholy.exastrisrebirth.block.BlockSieveAutomatic;
 import kr.loveholy.exastrisrebirth.compatibility.ModThaumcraft;
+import kr.loveholy.exastrisrebirth.compatibility.ModThermalExpansion;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockBarrelBOP;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockBarrelTweak;
 import kr.loveholy.exastrisrebirth.itemblock.ItemBlockHardStone;
@@ -35,11 +34,14 @@ public class ExAstrisRebirthBlock {
 	public static Block blockOreCobalt;
 	public static Block blockOreArdite;
 	public static void init() {
-		blockSieveAutomatic = new BlockSieveAutomatic();
-		GameRegistry.registerBlock(blockSieveAutomatic, ItemBlockSieveAutomatic.class ,ExAstrisRebirthData.SIEVE_AUTOMATIC);
-		
-		blockHammerAutomatic = new BlockHammerAutomatic();
-		GameRegistry.registerBlock(blockHammerAutomatic, ExAstrisRebirthData.HAMMER_AUTOMATIC);
+		if (Loader.isModLoaded("ThermalExpansion"))
+		{
+			blockSieveAutomatic = ModThermalExpansion.blockSieveAutomatic();
+			GameRegistry.registerBlock(blockSieveAutomatic, ItemBlockSieveAutomatic.class ,ExAstrisRebirthData.SIEVE_AUTOMATIC);
+			
+			blockHammerAutomatic = ModThermalExpansion.blockHammerAutomatic();
+			GameRegistry.registerBlock(blockHammerAutomatic, ExAstrisRebirthData.HAMMER_AUTOMATIC);
+		}
 		
 		blockEndCake = new BlockEndCake();
 		GameRegistry.registerBlock(blockEndCake, ExAstrisRebirthData.END_CAKE);
