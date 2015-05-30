@@ -12,7 +12,7 @@ import toops.tsteelworks.api.highoven.ISmeltingRegistry;
 
 public class ModTSteelworks {
 	public static final int ingotLiquidValue = TConstruct.ingotLiquidValue;
-	public static final int ingotCostHighoven = TConstruct.ingotLiquidValue * 3;
+	public static final int ingotCostHighoven = TConstruct.ingotLiquidValue;
 	private static ISmeltingRegistry instance;
 	public static void init()
 	{
