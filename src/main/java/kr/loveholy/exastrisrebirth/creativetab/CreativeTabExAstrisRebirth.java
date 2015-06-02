@@ -12,7 +12,7 @@ public class CreativeTabExAstrisRebirth extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return Item.getItemFromBlock(ExAstrisRebirthBlock.blockSieveAutomatic);
+		return Item.getItemFromBlock(ExAstrisRebirthBlock.blockEndCake);
 	}
 
 }

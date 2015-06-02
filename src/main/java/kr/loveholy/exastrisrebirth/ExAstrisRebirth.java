@@ -3,9 +3,6 @@ package kr.loveholy.exastrisrebirth;
 
 import java.io.File;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import kr.loveholy.exastrisrebirth.compatibility.ModArsMagica;
 import kr.loveholy.exastrisrebirth.compatibility.ModBigReactors;
 import kr.loveholy.exastrisrebirth.compatibility.ModBloodMagic;
@@ -28,6 +25,10 @@ import kr.loveholy.exastrisrebirth.util.RegistryRecipe;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
