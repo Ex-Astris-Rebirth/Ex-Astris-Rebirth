@@ -59,7 +59,7 @@ public class ExAstrisRebirthData {
 	public static final String[] SIEVE_UPGRADE_NAME = {"itemSieveUpgradeSpeed","itemSieveUpgradeFortune"};
 	public static final String DOLL_FREEZING = "itemDollFreezing";
 	public static final String DOLL_THAUMIC = "itemDollThaumic";
-    public static final String DOLL_CRIMSON = "itemDollCrimson";
+	public static final String DOLL_CRIMSON = "itemDollCrimson";
 	public static final String HAMMER_MANA = "itemHammerMana";
 	public static final String HAMMER_THAUMIUM = "itemHammerThaumium";
 	public static final String SEED_FOOD_PLUS = "itemSeedFoodPlus";
@@ -201,18 +201,18 @@ public class ExAstrisRebirthData {
 	
 	public static String oreAmberChanceKey = "amber";
 	public static int oreAmberChance = 128;
-
-    public static String primordialPearlChanceKey = "primordialPearl";
-    public static int primordialPearlChance = 512;
+	
+	public static String primordialPearlChanceKey = "primordialPearl";
+	public static int primordialPearlChance = 512;
 	
 	public static String allowThaumiumBarrelKey = "thaumiumBarrel";
 	public static boolean allowThaumiumbarrel = true;
 	
 	public static String allowDollThaumicKey = "thaumicDoll";
 	public static boolean allowDollThaumic = true;
-
-    public static String allowDollCrimsonKey = "crimsonDoll";
-    public static boolean allowDollCrimson = true;
+	
+	public static String allowDollCrimsonKey = "crimsonDoll";
+	public static boolean allowDollCrimson = true;
 	
 	public static String allowHammerThaumiumKey = "thaumiumHammer";
 	public static boolean allowHammerThaumium = true;
@@ -331,10 +331,10 @@ public class ExAstrisRebirthData {
 		allowThaumcraftResearch  = config.get(categoryThaumcraft, allowThaumcraftResearchKey, allowThaumcraftResearch, "Enable Thaumcraft Research").getBoolean();
 		oreQuicksilverChance = config.get(categoryOres, oreQuicksilverChanceKey, oreQuicksilverChance).getInt();
 		oreAmberChance = config.get(categoryOres, oreAmberChanceKey, oreAmberChance).getInt();
-        primordialPearlChance = config.get(categoryThaumcraft, primordialPearlChanceKey, primordialPearlChance, "Primordial pearl sieve drop chance (will be 1/n)").getInt();
+		primordialPearlChance = config.get(categoryThaumcraft, primordialPearlChanceKey, primordialPearlChance, "Primordial pearl sieve drop chance (will be 1/n)").getInt();
 		allowThaumiumbarrel  = config.get(categoryThaumcraft, allowThaumiumBarrelKey, allowThaumiumbarrel, "Enable Thaumium Barrel").getBoolean();
 		allowDollThaumic  = config.get(categoryThaumcraft, allowDollThaumicKey, allowDollThaumic, "Enable Thaumic Doll").getBoolean();
-        allowDollCrimson = config.get(categoryThaumcraft, allowDollCrimsonKey, allowDollCrimson, "Enable Crimson Doll").getBoolean();
+		allowDollCrimson = config.get(categoryThaumcraft, allowDollCrimsonKey, allowDollCrimson, "Enable Crimson Doll").getBoolean();
 		allowHammerThaumium  = config.get(categoryThaumcraft, allowHammerThaumiumKey, allowHammerThaumium, "Enable Thaumium Hammer").getBoolean();
 		//Thermal Expansion
 		allowThermalExpansionHeat  = config.get(categoryThermalExpansion, allowThermalExpansionHeatKey, allowThermalExpansionHeat, "Add Thermal Expansion Items and Fluids as heat sources for Crucible etc").getBoolean();

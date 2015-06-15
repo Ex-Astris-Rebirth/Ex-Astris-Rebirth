@@ -93,11 +93,11 @@ public class BlockBarrelTweak extends BlockBarrel
 							{
 								return true;
 							}
-
-                            if(item.getItem() == ExAstrisRebirthItem.itemDollCrimson)
-                            {
-                                return true;
-                            }
+							
+							if(item.getItem() == ExAstrisRebirthItem.itemDollCrimson)
+							{
+								return true;
+							}
 						}
 					}
 				}

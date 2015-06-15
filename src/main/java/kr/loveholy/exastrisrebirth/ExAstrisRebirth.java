@@ -96,13 +96,13 @@ public class ExAstrisRebirth {
 
 			ModThermalExpansion.init();
 		}
-
-        if (Loader.isModLoaded("WitchingGadgets")) {
-            log.info("+++ - Found Witching Gadgets!");
-
-            ModThaumcraft.witchingGadgetsLoaded();
-        }
 		
+		if (Loader.isModLoaded("WitchingGadgets")) {
+			log.info("+++ - Found Witching Gadgets!");
+
+			ModThaumcraft.witchingGadgetsLoaded();
+		}
+
 		if (Loader.isModLoaded("Thaumcraft"))
 		{
 			log.info("+++ - Found Thaumcraft!");
