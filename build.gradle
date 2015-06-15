@@ -90,6 +90,10 @@ repositories {
 		name "Thaumcraft"
 		artifactPattern "http://addons-origin.cursecdn.com/files/2227/552/[module]-[revision].[ext]"
 	 }
+    ivy {
+        name "WitchingGadgets"
+        artifactPattern "http://addons-origin.cursecdn.com/files/2240/805/[module]-[revision].[ext]"
+    }
 	ivy {
 		name "natura"
 		artifactPattern "http://addons-origin.cursecdn.com/files/2216/125/[module]-[revision].[ext]"
@@ -124,7 +128,7 @@ project.mkdir("libs")
 
 def fp = new File("libs/FoodPlus-${foodplus_version}.jar")
 new URL("http://loveholy.kr/libs/FoodPlus-${foodplus_version}.jar").withInputStream{ i -> fp.withOutputStream{ it << i }}
-	
+
 def am = new File("libs/${minecraft_version}_AM2-${am_version}.jar")
 new URL("http://loveholy.kr/libs/${minecraft_version}_AM2-${am_version}.jar").withInputStream{ i -> am.withOutputStream{ it << i }}
 
@@ -139,6 +143,7 @@ dependencies {
 	compile name: 'Draconic-Evolution', version: "${draconic_version}", ext: 'jar'
 	compile name: 'witchery', version: "${witchery_version}", ext: 'jar'
 	compile name: 'Thaumcraft', version: "${thaumcraft_version}", ext: 'jar'
+    compile name: 'WitchingGadgets', version: "${witchinggadgets_version}", ext: 'jar'
 	compile name: 'natura', version: "${natura_version}", ext: 'jar'
 	compile "com.teammetallurgy:Metallurgy:${metallurgy_version}:deobf"
 	compile "com.teammetallurgy:MetallurgyCore:${metallurgycore_version}:deobf"

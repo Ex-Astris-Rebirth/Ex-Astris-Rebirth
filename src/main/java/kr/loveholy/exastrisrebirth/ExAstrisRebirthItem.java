@@ -18,6 +18,7 @@ public class ExAstrisRebirthItem {
 	public static Item itemSieveUpgrade;
 	public static Item itemDollFreezing;
 	public static Item itemDollThaumic;
+    public static Item itemDollCrimson;
 	public static Item itemUnchargedNetherStar;
 	public static Item itemHammerMana;
 	public static Item itemChiselStone;
@@ -42,9 +43,6 @@ public class ExAstrisRebirthItem {
 		
 		itemDollFreezing = new ItemStackable(ExAstrisRebirthData.DOLL_FREEZING);
 		GameRegistry.registerItem(itemDollFreezing, ExAstrisRebirthData.DOLL_FREEZING);
-		
-		itemDollThaumic = new ItemStackable(ExAstrisRebirthData.DOLL_THAUMIC);
-		GameRegistry.registerItem(itemDollThaumic, ExAstrisRebirthData.DOLL_THAUMIC);
 
 		itemUnchargedNetherStar = new ItemStackable(ExAstrisRebirthData.UNCHARGED_NETHER_STAR);
 		GameRegistry.registerItem(itemUnchargedNetherStar, ExAstrisRebirthData.UNCHARGED_NETHER_STAR);
@@ -84,6 +82,12 @@ public class ExAstrisRebirthItem {
 		
 		if (Loader.isModLoaded("Thaumcraft"))
 		{
+            itemDollThaumic = new ItemStackable(ExAstrisRebirthData.DOLL_THAUMIC);
+            GameRegistry.registerItem(itemDollThaumic, ExAstrisRebirthData.DOLL_THAUMIC);
+
+            itemDollCrimson = new ItemStackable(ExAstrisRebirthData.DOLL_CRIMSON);
+            GameRegistry.registerItem(itemDollCrimson, ExAstrisRebirthData.DOLL_CRIMSON);
+
 			itemHammerThaumium =  ModThaumcraft.itemHammerThaumium();
 			GameRegistry.registerItem(itemHammerThaumium, ExAstrisRebirthData.HAMMER_THAUMIUM);
 			

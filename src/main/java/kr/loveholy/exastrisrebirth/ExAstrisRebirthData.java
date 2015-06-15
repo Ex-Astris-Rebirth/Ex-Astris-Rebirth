@@ -6,7 +6,7 @@ public class ExAstrisRebirthData {
 	public static final String MODID = "exastrisrebirth";
 	public static final String MODNAME = "Ex Astris Rebirth";
 	public static final String VERSION = "@VERSION@";
-	public static final String DEPENDENCIES = "required-after:Forge@[10.13.0.1180,);required-after:exnihilo;after:ThermalExpansion;after:Thaumcraft;after:TConstruct;after:TSteelworks;after:RedstoneArsenal;after:RotaryCraft;after:Metallurgy;after:ThermalFoundation;after:EnderIO;after:chisel;after:CoFHAPI|energy;after:BiomesOPlenty";
+	public static final String DEPENDENCIES = "required-after:Forge@[10.13.0.1180,);required-after:exnihilo;after:ThermalExpansion;after:Thaumcraft;after:TConstruct;after:TSteelworks;after:RedstoneArsenal;after:RotaryCraft;after:Metallurgy;after:ThermalFoundation;after:EnderIO;after:chisel;after:CoFHAPI|energy;after:BiomesOPlenty;after:WitchingGadgets";
     
 	public static final String UNCHARGED_NETHER_STAR = "itemUnchargedNetherStar";
 	public static final String BEE_TRAP_INFUSED = "blockBeeTrapInfused";
@@ -59,6 +59,7 @@ public class ExAstrisRebirthData {
 	public static final String[] SIEVE_UPGRADE_NAME = {"itemSieveUpgradeSpeed","itemSieveUpgradeFortune"};
 	public static final String DOLL_FREEZING = "itemDollFreezing";
 	public static final String DOLL_THAUMIC = "itemDollThaumic";
+    public static final String DOLL_CRIMSON = "itemDollCrimson";
 	public static final String HAMMER_MANA = "itemHammerMana";
 	public static final String HAMMER_THAUMIUM = "itemHammerThaumium";
 	public static final String SEED_FOOD_PLUS = "itemSeedFoodPlus";
@@ -200,12 +201,18 @@ public class ExAstrisRebirthData {
 	
 	public static String oreAmberChanceKey = "amber";
 	public static int oreAmberChance = 128;
+
+    public static String primordialPearlChanceKey = "primordialPearl";
+    public static int primordialPearlChance = 512;
 	
 	public static String allowThaumiumBarrelKey = "thaumiumBarrel";
 	public static boolean allowThaumiumbarrel = true;
 	
 	public static String allowDollThaumicKey = "thaumicDoll";
 	public static boolean allowDollThaumic = true;
+
+    public static String allowDollCrimsonKey = "crimsonDoll";
+    public static boolean allowDollCrimson = true;
 	
 	public static String allowHammerThaumiumKey = "thaumiumHammer";
 	public static boolean allowHammerThaumium = true;
@@ -324,8 +331,10 @@ public class ExAstrisRebirthData {
 		allowThaumcraftResearch  = config.get(categoryThaumcraft, allowThaumcraftResearchKey, allowThaumcraftResearch, "Enable Thaumcraft Research").getBoolean();
 		oreQuicksilverChance = config.get(categoryOres, oreQuicksilverChanceKey, oreQuicksilverChance).getInt();
 		oreAmberChance = config.get(categoryOres, oreAmberChanceKey, oreAmberChance).getInt();
+        primordialPearlChance = config.get(categoryThaumcraft, primordialPearlChanceKey, primordialPearlChance, "Primordial pearl sieve drop chance (will be 1/n)").getInt();
 		allowThaumiumbarrel  = config.get(categoryThaumcraft, allowThaumiumBarrelKey, allowThaumiumbarrel, "Enable Thaumium Barrel").getBoolean();
 		allowDollThaumic  = config.get(categoryThaumcraft, allowDollThaumicKey, allowDollThaumic, "Enable Thaumic Doll").getBoolean();
+        allowDollCrimson = config.get(categoryThaumcraft, allowDollCrimsonKey, allowDollCrimson, "Enable Crimson Doll").getBoolean();
 		allowHammerThaumium  = config.get(categoryThaumcraft, allowHammerThaumiumKey, allowHammerThaumium, "Enable Thaumium Hammer").getBoolean();
 		//Thermal Expansion
 		allowThermalExpansionHeat  = config.get(categoryThermalExpansion, allowThermalExpansionHeatKey, allowThermalExpansionHeat, "Add Thermal Expansion Items and Fluids as heat sources for Crucible etc").getBoolean();
