@@ -36,6 +36,10 @@ public class TileEntityBarrelTweak extends TileEntityBarrel{
 				{
 					return false;
 				}
+				if(item == ExAstrisRebirthItem.itemDollCrimson)
+				{
+					return false;
+				}
 				if(Block.getBlockFromItem(item) == ENBlocks.BeeTrap)
 				{
 					return false;

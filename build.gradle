@@ -91,6 +91,10 @@ repositories {
 		artifactPattern "http://addons-origin.cursecdn.com/files/2227/552/[module]-[revision].[ext]"
 	 }
 	ivy {
+		name "WitchingGadgets"
+		artifactPattern "http://addons-origin.cursecdn.com/files/2240/805/[module]-[revision].[ext]"
+	}
+	ivy {
 		name "natura"
 		artifactPattern "http://addons-origin.cursecdn.com/files/2216/125/[module]-[revision].[ext]"
 	 }
@@ -139,6 +143,7 @@ dependencies {
 	compile name: 'Draconic-Evolution', version: "${draconic_version}", ext: 'jar'
 	compile name: 'witchery', version: "${witchery_version}", ext: 'jar'
 	compile name: 'Thaumcraft', version: "${thaumcraft_version}", ext: 'jar'
+	compile name: 'WitchingGadgets', version: "${witchinggadgets_version}", ext: 'jar'
 	compile name: 'natura', version: "${natura_version}", ext: 'jar'
 	compile "com.teammetallurgy:Metallurgy:${metallurgy_version}:deobf"
 	compile "com.teammetallurgy:MetallurgyCore:${metallurgycore_version}:deobf"

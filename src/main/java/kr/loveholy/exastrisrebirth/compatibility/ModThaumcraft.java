@@ -21,7 +21,10 @@ import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchCategories;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
+import thaumcraft.common.config.ConfigBlocks;
+import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.config.ConfigResearch;
+import thaumcraft.common.entities.monster.EntityCultistCleric;
 import thaumcraft.common.entities.monster.EntityPech;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -36,6 +39,7 @@ import exnihilo.registries.SieveRegistry;
 public class ModThaumcraft {
 	public static final String CATEGORY_NAME = "ExAstrisRebirth";
 	public static final String PAGE_NAME = CATEGORY_NAME + ".page.";
+	private static boolean isWitchingGadgetsLoaded = false;
 
 	public static void init() {
 		addHammerRegistry();
@@ -51,6 +55,10 @@ public class ModThaumcraft {
 			addResearch();
 		}
 		addBarrelRegistry();
+	}
+	
+	public static void witchingGadgetsLoaded() {
+		isWitchingGadgetsLoaded = true;
 	}
 	
 	public static Item itemHammerThaumium()
@@ -95,6 +103,16 @@ public class ModThaumcraft {
 		SieveRegistry.register(Blocks.sand, 0,
 				GameRegistry.findItem("Thaumcraft", "ItemResource"), 6,
 				ExAstrisRebirthData.oreAmberChance);
+		if (isWitchingGadgetsLoaded) {
+			Item powerlessPearlBase = GameRegistry.findItem("WitchingGadgets", "item.WG_Material");
+			SieveRegistry.register(ConfigBlocks.blockCosmeticSolid, 11,
+					powerlessPearlBase, 12,
+					ExAstrisRebirthData.primordialPearlChance);
+		} else {
+			SieveRegistry.register(ConfigBlocks.blockCosmeticSolid, 11,
+					GameRegistry.findItem("Thaumcraft", "ItemEldritchObject"), 3,
+					ExAstrisRebirthData.primordialPearlChance);
+		}
 	}
 
 	public static void addHeatRegistry() {
@@ -148,6 +166,25 @@ public class ModThaumcraft {
 						.setParents(CATEGORY_NAME + "_BARRELTHAUMIUM")
 						.registerResearchItem();
 
+			}
+			if (ExAstrisRebirthData.allowDollCrimson) {
+				new ResearchItem(CATEGORY_NAME + "_DOLLCRIMSON", CATEGORY_NAME,
+						new AspectList().add(Aspect.SOUL, 10)
+								.add(Aspect.ELDRITCH, 10).add(Aspect.MAGIC, 10),
+						2, -1, 1, new ItemStack(
+								ExAstrisRebirthItem.itemDollCrimson, 1, 0))
+						.setPages(
+								new ResearchPage[]{
+										new ResearchPage(PAGE_NAME + "16"),
+										new ResearchPage(
+												(CrucibleRecipe) ConfigResearch.recipes
+														.get(CATEGORY_NAME
+																+ "_DOLLCRIMSON"))})
+						.setParents(CATEGORY_NAME + "_BARRELTHAUMIUM")
+						.setParentsHidden("ELDRITCHMAJOR")
+						.setSecondary()
+						.registerResearchItem();
+				ThaumcraftApi.addWarpToResearch(CATEGORY_NAME + "_DOLLCRIMSON", 4);
 			}
 
 			if (Loader.isModLoaded("MagicBees")
@@ -737,6 +774,17 @@ public class ModThaumcraft {
 								new AspectList().add(Aspect.MAGIC, 8)
 										.add(Aspect.SOUL, 8)
 										.add(Aspect.GREED, 8)));
+		ConfigResearch.recipes.put(CATEGORY_NAME + "_DOLLCRIMSON",
+				ThaumcraftApi
+						.addCrucibleRecipe(
+								CATEGORY_NAME + "_DOLLCRIMSON",
+								new ItemStack(
+										ExAstrisRebirthItem.itemDollCrimson, 1,
+										0),
+								new ItemStack(ENItems.Doll, 1, 0),
+								new AspectList().add(Aspect.MAGIC, 8)
+										.add(Aspect.SOUL, 8)
+										.add(Aspect.ELDRITCH, 8)));
 		ConfigResearch.recipes.put(CATEGORY_NAME + "_SHIMMERLEAF",
 				ThaumcraftApi.addCrucibleRecipe(
 						CATEGORY_NAME + "_SHIMMERLEAF",
@@ -768,6 +816,10 @@ public class ModThaumcraft {
 				new ItemStack(ExAstrisRebirthItem.itemDollThaumic),
 				EntityPech.class, "portal", new ItemStack(
 						ExAstrisRebirthItem.itemDollThaumic));
+		BarrelRecipeRegistry.addMobRecipe(Fluids.fluidWitchWater,
+				new ItemStack(ExAstrisRebirthItem.itemDollCrimson),
+				EntityCultistCleric.class, "portal", new ItemStack(
+						ConfigItems.itemEldritchObject, 1, 1));
 		BarrelRecipeRegistry.addFluidItemRecipe(
 				Fluids.fluidWitchWater,
 				new ItemStack(Blocks.obsidian),
