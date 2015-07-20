@@ -234,7 +234,8 @@ public class ItemHammerBound extends ItemHammerBase implements IBindable{
             return 0.0F;
         }
 
-        return super.func_150893_a(par1ItemStack, par2Block);
+        // return super.func_150893_a(par1ItemStack, par2Block); // Seems to always return one (or zero?)
+        return efficiencyOnProperMaterial;
     }
 
     @Override
