@@ -70,14 +70,5 @@ public class ModThermalExpansion {
 			BarrelRecipeRegistry.addMobRecipe(FluidRegistry.WATER, new ItemStack(ExAstrisRebirthItem.itemDollFreezing), EntityBlizz.class, "snowballpoof", new ItemStack(ExAstrisRebirthItem.itemDollFreezing));
 		}
 	}
-	
-	public static Block blockSieveAutomatic()
-	{
-		return new BlockSieveAutomatic();
-	}
-	
-	public static Block blockHammerAutomatic()
-	{
-		return new BlockHammerAutomatic();
-	}
+
 }

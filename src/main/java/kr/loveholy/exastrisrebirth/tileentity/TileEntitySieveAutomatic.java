@@ -106,7 +106,7 @@ public class TileEntitySieveAutomatic extends TileEntity implements
 		if (storage.getEnergyStored() > getEffectiveEnergy()) {
 			if (mode == SieveMode.EMPTY && inventory[0] != null) {
 				ItemStack held = inventory[0];
-				if (SieveUtils.registered(held)) {
+				if (SieveRegistry.registered(Block.getBlockFromItem(held.getItem()), held.getItemDamage())) {
 					addSievable(Block.getBlockFromItem(held.getItem()),
 							held.getItemDamage());
 					decrStackSize(0, 1);
@@ -476,7 +476,7 @@ public class TileEntitySieveAutomatic extends TileEntity implements
 	@Override
 	public boolean canInsertItem(int slot, ItemStack item, int side) {
 		if (slot == 0) {
-			return SieveUtils.registered(item);
+			return SieveRegistry.registered(Block.getBlockFromItem(item.getItem()), item.getItemDamage());
 		}
 
 		if (slot == 21)
